@@ -1,0 +1,9 @@
+# Godot-specific ignores
+.godot/
+.import/
+export_presets.cfg
+
+# System/Editor ignores
+.DS_Store
+*.uid
+*.tmp

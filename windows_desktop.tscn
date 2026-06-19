@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://c68ox8qq6fsrn"]
+
+[ext_resource type="Shader" uid="uid://r2v5lam8s77e" path="res://windows_desktop.gdshader" id="1_0o474"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwc6h"]
+bg_color = Color(0.51473063, 0.61340994, 0.7054628, 1)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0o474"]
+bg_color = Color(0.53154486, 0.61188656, 0.68234235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb5xj"]
+bg_color = Color(0.5137255, 0.6117647, 0.7058824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbeqc"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wlgid"]
+bg_color = Color(0.5137255, 0.6117647, 0.7058824, 1)
+shadow_size = 5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0o474"]
+shader = ExtResource("1_0o474")
+shader_parameter/scanline_count = 541.622025252045
+shader_parameter/scanline_opacity = 0.1470000069825
+
+[node name="WindowsDesktop" type="Control" unique_id=1864546836]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -1.0
+offset_right = 4.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1858409452]
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.29447675, 0.6701711, 0.90617514, 1)
+
+[node name="Panel" type="Panel" parent="ColorRect" unique_id=1813531734]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qwc6h")
+
+[node name="Button" type="Button" parent="ColorRect/Panel" unique_id=1789428977]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -43.0
+offset_right = 116.0
+offset_bottom = -6.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.49315646, 0.49315646, 0.49315646, 0.19215687)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0o474")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb5xj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sbeqc")
+text = "START"
+
+[node name="TimePanel" type="Panel" parent="ColorRect/Panel" unique_id=2082177506]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -49.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+tooltip_auto_translate_mode = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_wlgid")
+
+[node name="Label" type="Label" parent="ColorRect/Panel/TimePanel" unique_id=1972505630]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 123.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "12.30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Window" type="Window" parent="." unique_id=675469844]
+transparent_bg = true
+oversampling_override = 1.0
+title = "Settings"
+initial_position = 1
+size = Vector2i(500, 300)
+unresizable = true
+transparent = true
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=461841501]
+top_level = true
+material = SubResource("ShaderMaterial_0o474")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
